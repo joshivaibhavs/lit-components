@@ -1,0 +1,12 @@
+version: '2.4'
+
+services:
+  lit-server:
+    build: .
+    command: [ "/bin/bash" ]
+    volumes:
+      - .:/projects/app
+    stdin_open: true
+    tty: true
+    ports:
+      - "8080:8080"
